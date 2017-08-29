@@ -25,5 +25,10 @@ pipeline {
         sh './jenkins/deploy.sh dev'
       }
     }
+    stage('Deploy to Staging') {
+      steps {
+        input 'Deploy to Staging'
+      }
+    }
   }
 }
