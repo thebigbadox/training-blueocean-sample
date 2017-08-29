@@ -20,5 +20,10 @@ pipeline {
         junit '**/test-results/karma/*.xml'
       }
     }
+    stage('Deploy') {
+      steps {
+        sh './jenkins/deploy.sh dev'
+      }
+    }
   }
 }
